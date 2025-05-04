@@ -133,6 +133,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-left: auto;
 }
 
 .theme-toggle {
@@ -220,6 +221,28 @@ a:hover {
 .nav-links li.active a {
   color: var(--primary-color);
   font-weight: 600;
+}
+
+/* Add this new style for the theme toggle in the navbar */
+.nav-links li:last-child {
+  margin-left: auto; /* This pushes the last item (theme toggle) to the right */
+}
+
+/* Adjust the theme toggle button in the navbar */
+.nav-links .theme-toggle {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+}
+
+.nav-links .theme-toggle:hover {
+  background-color: rgba(98, 0, 234, 0.1);
+  transform: rotate(30deg);
 }
 
 /* Header styles */

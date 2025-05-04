@@ -59,10 +59,6 @@ function App() {
           </motion.div>
           
           <div className="nav-controls">
-            <button className="theme-toggle" onClick={toggleDarkMode}>
-              <i className={`fas ${darkMode ? 'fa-sun' : 'fa-moon'}`}></i>
-            </button>
-            
             <button className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <span></span>
               <span></span>
@@ -93,6 +89,11 @@ function App() {
             </li>
             <li className={activeSection === 'achievements' ? 'active' : ''}>
               <a href="#achievements" onClick={() => scrollToSection('achievements')}>Achievements</a>
+            </li>
+            <li>
+              <button className="theme-toggle" onClick={toggleDarkMode} style={{ background: 'none', border: 'none' }}>
+                <i className={`fas ${darkMode ? 'fa-sun' : 'fa-moon'}`}></i>
+              </button>
             </li>
           </motion.ul>
         </div>
